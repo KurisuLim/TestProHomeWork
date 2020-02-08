@@ -13,6 +13,7 @@ public class SimpleJavaExercises {
         int[] num = {1,2,3,4,5};
         skipNumber(7, 10); // # 2
         printArrayInt(num);
+        outBoundMessage(num);
     }
 
     public static void skipNumber(int min, int max){
@@ -31,5 +32,18 @@ public class SimpleJavaExercises {
         }
     }
 
+    public static void  outBoundMessage(int[] arrNum){
+        try{
+            for(int i = 0; i <= arrNum.length; i++){
+                System.out.println("Outbound in: " + arrNum[i]);
+            }
+        }
+        catch (Exception e){
+            System.out.println("Outside of bound message.");
+        }
+        finally {
+            System.out.print("Just testing finally block.");
+        }
+    }
 
 }
