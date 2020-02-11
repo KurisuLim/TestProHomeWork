@@ -4,6 +4,8 @@
 /modules.xml
 /misc.xml
 .idea/
+.DS_Store
+.env
 # Compiled class file
 *.class
 # Log file
