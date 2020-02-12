@@ -4,24 +4,20 @@ import java.util.Arrays;
 
 public class SolvePalindrome {
     public static void main(String[] args){
-        isPalindrome("racecar");
-        System.out.println("");
-        isPalindrome("Christopher");
+        isPalindrome("race cars"); //not palindrome
+        isPalindrome("race car ! @#$%^&*"); //palindrome
     }
-
     public static void isPalindrome(String word){
         String reverseWord = "";
-        System.out.println("Current Word: " + word + "\n");
-
-        for(int i = word.length() - 1; i >= 0; i--){
-            reverseWord += word.charAt(i);
+        String sanitizeWord = word.replaceAll("[!.,?@#$%^&*-+^\\s]","");
+        System.out.println("\nCurrent Word: " + sanitizeWord + "\n");
+        for(int i = sanitizeWord.length() - 1; i >= 0; i--){
+            reverseWord += sanitizeWord.charAt(i);
             System.out.println(reverseWord);
         }
-
         System.out.println("\nReversed word:" + reverseWord + "\n");
-
-        if(word.equals(reverseWord)){
-            System.out.println(word + " & " + reverseWord + " is Palindrome!" );
+        if(sanitizeWord.equals(reverseWord)){
+            System.out.println(sanitizeWord + " & " + reverseWord + " is Palindrome!" );
         }
         else{
             System.out.println("It's not Palindrome!");
