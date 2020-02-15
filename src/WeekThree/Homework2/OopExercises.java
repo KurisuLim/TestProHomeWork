@@ -1,5 +1,8 @@
 package WeekThree.Homework2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class OopExercises {
     /*
         Week 3 Homework 2 – OOP Exercises.
@@ -25,5 +28,57 @@ public class OopExercises {
         set parameters to them and print country, model and maker
 
         Upload in txt file link to you Pull Request
+
+        Part 3
+        (Self Challenge)
+        * Create a Class outside the main Class file
+        * Practice Encapsulation, getter and setter
+        * Use what you learned so far
     */
+
+    public static void main(String[] args){
+        // Solution
+        Car audi = new Car();
+        audi.setCountry("United States");
+        audi.setModel("Audi Sports");
+        audi.setMaker("Audi");
+        System.out.println(audi.getCarInfo());
+
+        Car bmw = new Car();
+        bmw.setCountry("United Kingdom");
+        bmw.setModel("The BMW 3 Series Gran Turismo");
+        bmw.setMaker("BMW");
+        System.out.println(bmw.getCarInfo());
+
+        Car honda = new Car();
+        honda.setCountry("Japan");
+        honda.setModel("Civic");
+        honda.setMaker("Honda");
+        System.out.println(honda.getCarInfo());
+
+        //Encapsulation Practice
+        System.out.println("\n\nEncapsulation Testing:\n\n");
+        myCar();
+    }
+
+    public static void myCar(){
+        String[] country = {"United States", "Germany", "Japan"};
+        String[] models = {"Everest", "Beetle", "Toyota"};
+        String[] makers = {"Ford", "Volkswagen", "Corolla Hybrid"};
+
+        List<Car> new_car = new ArrayList<>();
+
+        for(int i = 0; i < makers.length; i++){
+            Car car_type = new Car();
+            car_type.setCountry(country[i]);
+            car_type.setModel(models[i]);
+            car_type.setMaker(makers[i]);
+            new_car.add(car_type);
+        }
+
+        for(Car myCar : new_car){
+            System.out.println(myCar.getCarInfo());
+        }
+
+    }
 }
