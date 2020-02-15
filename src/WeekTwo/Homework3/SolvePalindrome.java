@@ -1,6 +1,4 @@
-package Homework3;
-
-import java.util.Arrays;
+package WeekTwo.Homework3;
 
 public class SolvePalindrome {
     public static void main(String[] args){

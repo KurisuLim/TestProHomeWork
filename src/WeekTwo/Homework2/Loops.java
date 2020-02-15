@@ -1,4 +1,4 @@
-package Homework2;
+package WeekTwo.Homework2;
 
 public class Loops {
     public static void main(String[] args){
