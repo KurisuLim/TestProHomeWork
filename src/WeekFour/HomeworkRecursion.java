@@ -31,34 +31,34 @@ public class HomeworkRecursion {
             return true;
         }
 
-        String new_word = word.toLowerCase().replaceAll("[!.,?@#$%^&*-+^\\s]","");
-        int new_word_length = new_word.length();
-        String firstChar = new_word.substring(0,1);
-        String endChar = new_word.substring(new_word.length()-1, new_word_length);
+        String newWord = word.toLowerCase().replaceAll("[!.,?@#$%^&*-+^\\s]","");
+        int newWordLength = newWord.length();
+        String firstChar = newWord.substring(0,1);
+        String endChar = newWord.substring(newWord.length()-1, newWordLength);
 
         if(!firstChar.equals(endChar)){
             return false;
         }else{
-            return isPalindrome(new_word.substring(1, new_word.length()-1));
+            return isPalindrome(newWord.substring(1, newWord.length()-1));
         }
 
     }
 
-    public static void fizzBuzz(int start_num, int end_num){
+    public static void fizzBuzz(int startNum, int endNum){
 
-        if(start_num % 15 == 0){
+        if(startNum % 15 == 0){
             System.out.println("Fizz Buzz");
-        } else if(start_num % 3 == 0){
+        } else if(startNum % 3 == 0){
             System.out.println("Fizz");
-        } else if(start_num % 5 == 0){
+        } else if(startNum % 5 == 0){
             System.out.println("Buzz");
         }else{
-            System.out.println(start_num);
+            System.out.println(startNum);
         }
-            start_num++;
+        startNum++;
 
-        if(start_num <= end_num) {
-            fizzBuzz(start_num,end_num);
+        if(startNum <= endNum) {
+            fizzBuzz(startNum,endNum);
         }
 
     }
