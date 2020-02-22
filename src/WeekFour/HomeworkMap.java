@@ -17,22 +17,22 @@ class HomeworkMap {
     removeValue(); //#3
   }
   public static void mapKey(){
-    Map<Integer, String> user_list = new HashMap<>();
+    Map<Integer, String> userList = new HashMap<>();
     user_list.put(1,"Lim" );
     user_list.put(2,"Test Pro" );
     user_list.put(3,"QA Engineer" );
     user_list.put(4,"Student" );
     // displaying the HashMap
-    System.out.println("Initial Mappings are: " + user_list);
+    System.out.println("Initial Mappings are: " + userList);
     // displaying the keys and sets
-    System.out.println("Key: " + user_list.keySet());
-    System.out.println("value: " + user_list.values());
+    System.out.println("Key: " + userList.keySet());
+    System.out.println("value: " + userList.values());
     // displaying specified key value
-    System.out.println("The Key # 1: " + user_list.get(1) );
+    System.out.println("The Key # 1: " + userList.get(1) );
     // displays true or false if the key exist
-    System.out.println("Is the first Key exist? : " + user_list.containsKey(1));
+    System.out.println("Is the first Key exist? : " + userList.containsKey(1));
     //displays true or false if the value does exist
-    System.out.println("Is the first value of the key exist? : " + user_list.containsValue("Lim"));
+    System.out.println("Is the first value of the key exist? : " + userList.containsValue("Lim"));
   }
   public static void copyMap(){
     Map<String, Integer> age1 = new HashMap<>();
