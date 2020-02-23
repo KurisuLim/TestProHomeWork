@@ -1,11 +1,9 @@
 package WeekFour;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class HomeworkSets {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         /*
         *
         * Sets:
@@ -17,7 +15,7 @@ public class HomeworkSets {
         System.out.println("\n#1");
         loopSet(10);
         System.out.println("\n#2");
-        removeOddSet(15);
+        removeOddSet();
         System.out.println("\n#3");
         duplicateValues();
 
@@ -26,30 +24,29 @@ public class HomeworkSets {
     public static void loopSet(int num){
         int number = num;
 
-        Set<Integer> loop_num = new HashSet<>();
+        Set<Integer> loopNum = new HashSet<>();
 
         for(int i = 1; i <= number; i++ ){
-            loop_num.add(i);
+            loopNum.add(i);
         }
 
-        for (int set : loop_num){
+        for (int set : loopNum){
             System.out.println("Counting: " + set);
         }
     }
 
-    public static void removeOddSet(int num){
-        Set<Integer> even_num = new HashSet<>();
+    public static void removeOddSet(){
+        Set<Integer> evenNum = new HashSet<>();
+        evenNum.addAll(Arrays.asList(new Integer[] {1,2,3,4,5,6,7,8,9,10}));
 
-        for(int i = 1; i <= num; i++){
-            if( i % 2== 0){
-                System.out.println("Number: " + i + " is even. Adding to the list");
-                even_num.add(i);
-            }
-            else {
-                System.out.println("Number: " + i + " is odd!");
+        for(Iterator<Integer> iterator = evenNum.iterator(); iterator.hasNext();){
+            Integer oddNumber = iterator.next();
+
+            if(oddNumber % 2 != 0){
+                iterator.remove();
             }
         }
-        System.out.println("\nSet of Numbers: " + even_num);
+        System.out.println("\nSet of Numbers: " + evenNum);
     }
 
     public static void duplicateValues(){
