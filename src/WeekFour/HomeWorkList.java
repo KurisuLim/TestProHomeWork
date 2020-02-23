@@ -23,43 +23,43 @@ public class HomeWorkList {
     public static void initArrayList(int num){
         int number = num;
 
-        List<Integer> array_list = new ArrayList();
+        List<Integer> arrayList = new ArrayList();
 
         for(int i = 1; i <= number; i++){
             System.out.println("\nAdding the number: "+ i + " to the array list.");
-            array_list.add(i);
+            arrayList.add(i);
         }
         System.out.println("\nPrinting the array list\n");
-        for(int list : array_list){
+        for(int list : arrayList){
             System.out.println("output: " + list);
         }
 
     }
 
     public static void removeInt(){
-        List<Integer> array_num = new ArrayList<>();
-        array_num.addAll(Arrays.asList(1, 2, 3, 6, 7, 3, 2, 1));
+        List<Integer> arrayNum = new ArrayList<>();
+        arrayNum.addAll(Arrays.asList(1, 2, 3, 6, 7, 3, 2, 1));
 
-        System.out.println("Current array list: " + array_num);
-        array_num.removeAll(Arrays.asList(2));
+        System.out.println("Current array list: " + arrayNum);
+        arrayNum.removeAll(Arrays.asList(2));
         System.out.println("Removing the number: " + 2);
-        System.out.println("Current array list: " + array_num);
+        System.out.println("Current array list: " + arrayNum);
 
     }
     public static void removeOddNum(int num){
         int number = num;
 
-        List<Integer> array_num = new ArrayList<>();
+        List<Integer> arrayNum = new ArrayList<>();
 
         for(int i = 1; i <= number; i++){
             if( i %2 == 0){
                 System.out.println("Number: " + i + " is even. Adding to the list!");
-                array_num.add(i);
+                arrayNum.add(i);
             }
             else{
                 System.out.println("Number: " + i + " is odd. Skipping!");
             }
         }
-        System.out.println("\nList of even numbers: " + array_num);
+        System.out.println("\nList of even numbers: " + arrayNum);
     }
 }
